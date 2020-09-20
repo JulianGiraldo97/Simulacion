@@ -1,0 +1,13 @@
+.container {
+    width: 70%;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.divBlock {
+  margin-top: 20px;
+}
+
+#number {
+    text-decoration: none;
+}
