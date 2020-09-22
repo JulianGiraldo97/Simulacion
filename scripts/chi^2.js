@@ -3,6 +3,8 @@ window.addEventListener('load', function () {
 
     class Chi_2 {
 
+        
+
         stringToR_i(data) {
             return data.split(",").map(Number);
         }

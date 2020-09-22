@@ -22,126 +22,38 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <h1 class="navbar-brand">Generación de numeros Pseudoaleatorios y pruebas estadisticas</h1>
   </nav>
-  <div class="container" style="padding-top: 7%; padding-bottom: 7%;">
-    <!-- select -->
-    <ul class="nav nav-pills flex-column flex-sm-row" id="pills-tab" role="tablist">
-      <li class="nav-item" role="presentation">
-        <a class="nav-link active" id="label-c" data-toggle="pill" href="#div-c" role="tab" aria-controls="div-c"
-          aria-selected="true">Cuadrados Medios</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="label-cl" data-toggle="pill" href="#div-cl" role="tab" aria-controls="div-cl"
-          aria-selected="false">Congruencia Lineal</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="label-cm" data-toggle="pill" href="#div-cm" role="tab" aria-controls="div-cm"
-          aria-selected="false">Congruencial Multiplicativo</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="label-du" data-toggle="pill" href="#div-du" role="tab" aria-controls="div-du"
-          aria-selected="false">distribución Uniforme</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="label-dn" data-toggle="pill" href="#div-dn" role="tab" aria-controls="div-dn"
-          aria-selected="false">distribución Normal</a>
-      </li>
-      <li class="nav-item" role="presentation">
-        <a class="nav-link" id="label-pruebas" data-toggle="pill" href="#div-pruebas" role="tab"
-          aria-controls="div-pruebas" aria-selected="false">Pruebas</a>
-      </li>
-    </ul>
-    <div class="tab-content" id="pills-tabContent">
-      <!-- Cuadrados Medios -->
-      <div class="tab-pane fade show active" id="div-c" role="tabpanel" aria-labelledby="label-c">
-        <h2 class="pt-3 pb-3"> Cuadrados Medios</h2>
-        <form action="#" class="row">
-          <div class="col-6">
-            <label for="seed">Semilla</label>
-            <input type="number" class="form-control" id="seed" required value="3652">
-          </div>
-          <div class="col-6">
-            <label for="count">Cantidad de datos</label>
-            <input type="number" class="form-control" id="count" required value="10">
-          </div>
-          <button type="submit" id="btn-c" class="btn btn-primary m-3">Generar</button>
-        </form>
-        <table class="table table-striped table-dark" id="table-c">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Xi</th>
-              <th scope="col">Xi^2</th>
-              <th scope="col">Extensión</th>
-              <th scope="col">Extracción</th>
-              <th scope="col">Ri</th>
-              
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-      <!-- Congruencia Lineal -->
-      <div class="tab-pane fade show" id="div-cl" role="tabpanel" aria-labelledby="label-cl">
-        <h2>Congruencia Lineal</h2>
-        <div class="row">
-          <form action="#" class="row">
-            <div class="col-6">
-              <label for="cl_x_0">Ingresar X_0:</label>
-              <input type="number" class="form-control" id="cl_x_0" required value=1>
-            </div>
-            <div class="col-6">
-              <label for="cl_k">Ingresar K:</label>
-              <input type="number" class="form-control" id="cl_k" value=4 required>
-            </div>
-            <div class="col-6">
-              <label for="cl_c">Ingresar c:</label>
-              <input type="number" class="form-control" id="cl_c" value=6 required>
-            </div>
-            <div class="col-6">
-              <label for="cl_g">Ingresar g:</label>
-              <input type="number" class="form-control" id="cl_g" value=7 required>
-            </div>
-            <div class="col-6">
-              <label for="cl_min">Ingresar minimo:</label>
-              <input type="number" class="form-control" id="cl_min" value=8 required>
-            </div>
-            <div class="col-6">
-              <label for="cl_max">Ingresar maximo:</label>
-              <input type="number" class="form-control" id="cl_max" value=10 required>
-            </div>
-            <button type="submit" id="congr_line_play" class="btn btn-primary m-3">Generar</button>
-          </form>
-        </div>
-        <div class="row">
-          <table class="table table-striped table-dark" id="table-cl">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">X_i</th>
-                <th scope="col">R_i</th>
-                <th scope="col">N_i</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-      </div>
+    <div class="container" style="padding-top: 7%; padding-bottom: 7%;">
+      <div class="jumbotron">
+        <h1 class="display-4">Congruencial multiplicativo</h1>
+        <p class="lead"><h3>Pasos</h3></p>
+        <p class="lead"><h5>1. Ingrese los valores de a, la semilla, m y la cantidad de números a generar (n).</h5></p>
+        <p class="lead"><h5>2. Clic en el botón "Generar" para generar los números pseudoaleatorios.</h5></p>
+        <p class="lead"><h5>3. De clic en cualquiera de los botones de la prueba que desea realizar sobre los números generados.</h5></p>
+      </div>    
+        
       <!-- Congruencia Multiplicativa -->
       <div class="tab-pane fade show" id="div-cm" role="tabpanel" aria-labelledby="label-cl">
         <h2>Congruencia Multiplicativa</h2>
         <div class="row">
           <form action="#" class="row">
             <div class="col-6">
-              <label for="cm_x_0">Ingresar X_0:</label>
+              <label for="cm_x_0">Ingresar a:</label>
               <input type="number" class="form-control" id="cm_x_0" required value=5>
             </div>
             <div class="col-6">
-              <label for="cm_t">Ingresar a:</label>
+              <label for="cm_t">Ingresar Semilla:</label>
               <input type="number" class="form-control" id="cm_t" value=3 required>
             </div>
             <div class="col-6">
               <label for="cm_g">Ingresar m:</label>
               <input type="number" class="form-control" id="cm_g" value=7 required>
+            </div>
+            <div class= "col-6">
+              <label for="tam">Ingresar n</label>
+              <input type="number" class="form-control" id="tam" value=0 required>
+            </div> 
+            <div class="row" style="padding-top: 10px;">
+              <label for="tam"><h2>Intervalo de confianza</h2></label>
             </div>
             <div class="row">
               <div class="col-6">
@@ -152,12 +64,13 @@
                 <label for="cm_max">Ingresar maximo:</label>
                 <input type="number" class="form-control" id="cm_max" value=10 required>
               </div>
-              <div class= "col-6">
-                <label for="tam">Ingresar n</label>
-                <input type="number" class="form-control" id="tam" value=0 required>
+              <div style="align-content: center;">
+                <button type="submit" id="congr_mult_play" class="btn btn-primary m-3">Generar</button>
+                <button type="submit" id="chisq_play" class="btn btn-primary m-3">Prueba Chi Cuadrado</button>
+                <button type="submit" id="corridas_play" class="btn btn-primary m-3">Prueba de Corridas</button>
               </div>
-            </div>
-            <button type="submit" id="congr_mult_play" class="btn btn-primary m-3">Generar</button>
+            </div>           
+
           </form>
         </div>
         <div class="row" style="padding-top: 5%;">
@@ -174,127 +87,47 @@
           </table>
         </div>
       </div>
-      <!-- Distribucion uniforme -->
-      <div class="tab-pane fade show" id="div-du" role="tabpanel" aria-labelledby="label-du">
-        <h2>Distribución Uniforme</h2>
-        <div class="row" style="padding-bottom: 5%;">
+      <!-- Prueba de uniformidad (chi^2) -->
+      <div class="card mb-3">
+        <div class="card-header text-center text-light bg-secondary">
+          <h2 class="card-title">Prueba de uniformidad (chi^2)</h2>
+        </div>
+        <div class="card-body">
           <div class="row">
-            <div class="col-6">
-              <form action="#" class="row">
-                <label for="count">Ingresar numero minimo:</label>
-                <input type="number" class="form-control" id="uni_min" required>
-                <label for="count">Ingresar numero máximo:</label>
-                <input type="number" class="form-control" id="uni_max" required>
-                <button type="submit" id="uni_play" class="btn btn-primary m-3">Generar</button>
-              </form>
-            </div>
-            <div class="col-6">
-              <table class="table table-striped table-dark" id="table-uni">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Ri</th>
-                    <th scope="col">Ni</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
           </div>
-        </div>
-
-      </div>
-      <!-- Distribucion Normal -->
-      <div class="tab-pane fade show" id="div-dn" role="tabpanel" aria-labelledby="label-dn">
-        <h2>Distribución Normal</h2>
-        <div class="row">
-          <button type="submit" id="nor_play" class="btn btn-primary m-3">Generar</button>
-        </div>
-        <div class="row" style="padding-bottom: 5%;">
-          <table class="table table-striped table-dark" id="table-nor1">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Ri</th>
-                <th scope="col">Ni</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <div class="row" style="padding-bottom: 5%;">
-          <div class="col-6">
-            <table class="table table-striped table-dark" id="table-nor3">
+          <div class="row">
+            <table class="table table-striped table-dark" id="table-chi_2">
               <thead>
                 <tr>
-                  <th scope="col">Minimo</th>
-                  <th scope="col">maximo</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="col-6">
-            <table class="table table-striped table-dark" id="table-nor2">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Intervalos</th>
-                  <th scope="col">Frecuencias</th>
+                  <th scope="col">No.</th>
+                  <th scope="col">Frec. Esperada</th>
+                  <th scope="col">Frec. Obtenida</th>
+                  <th scope="col">Chi^2</th>
                 </tr>
               </thead>
               <tbody></tbody>
             </table>
           </div>
         </div>
-
-      </div>
-      <!-- Pruebas -->
-      <div class="tab-pane fade show" id="div-pruebas" role="tabpanel" aria-labelledby="label-pruebas">
-        <!-- panel de entrada de pruebas -->
-        <div class="card mb-3">
-          <div class="card-header text-center text-light bg-secondary">
-            <h2 class="card-title">Pruebas</h2>
-          </div>
-          <div class="card-body">
-            <form action="#" class="row">
-              <div class="col-6">
-                <div class="row">
-                  <div class="col-12">
-                    <label for="seed">Ingresar r_i(separados por comas): </label>
-                  </div>
-                  <div class="col-12">
-                    <textarea class="form-control" id="pruebas_r_i" cols="60" rows="10"></textarea>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <label for="count">Ingresar numero minimo:</label>
-                <input type="number" class="form-control" id="pruebas_min">
-                <label for="count">Ingresar numero máximo:</label>
-                <input type="number" class="form-control" id="pruebas_max">
-                <button type="submit" id="pruebas_play" class="btn btn-primary m-3">Generar</button>
-              </div>
-            </form>
-          </div>
+        <div class="card-footer text-muted text-center">
+          RESULTADO:
+          <strong>
+            <h1 id="result_chi"></h1>
+          </strong>
         </div>
-        <!-- Prueba de medias -->
-        <div class="card mb-3">
-          <div class="card-header text-center text-light bg-secondary">
-            <h2 class="card-title">Prueba de medias</h2>
+        <br><div class="card-header text-center text-light bg-secondary">
+          <h2 class="card-title">Pueba de corridas hacia arriba y abajo</h2>
+        </div>
+        <div class="card-body">
+          <div class="row">
           </div>
-          <div class="card-body text-center">
-            <table class="table table-striped table-dark text-center" id="table-pm">
+          <div class="row">
+            <table class="table table-striped table-dark" id="table-corridas">
               <thead>
                 <tr>
-                  <th scope="col">Aceptación</th>
-                  <th scope="col">α</th>
-                  <th scope="col">n</th>
-                  <th scope="col">R</th>
-                  <th scope="col">1-(α/2)</th>
-                  <th scope="col">Z</th>
-                  <th scope="col">LI</th>
-                  <th scope="col">LS</th>
+                  <th scope="col">No.</th>
+                  <th scope="col">Valor Esperado</th>
+                  <th scope="col">Valor Estadístico</th>
                 </tr>
               </thead>
               <tbody></tbody>
@@ -303,89 +136,13 @@
           <div class="card-footer text-muted text-center">
             RESULTADO:
             <strong>
-              <h1 id="result_medias"></h1>
-            </strong>
-          </div>
-        </div>
-        <!-- Prueba de varianza -->
-        <div class="card mb-3">
-          <div class="card-header text-center text-light bg-secondary">
-            <h2 class="card-title">Prueba de varianza</h2>
-          </div>
-          <div class="card-body">
-            <table class="table table-striped table-dark" id="table-pv">
-              <thead>
-                <tr>
-                  <th scope="col">Aceptación</th>
-                  <th scope="col">α</th>
-                  <th scope="col">n</th>
-                  <th scope="col">R</th>
-                  <th scope="col">α^2</th>
-                  <th scope="col">α/2</th>
-                  <th scope="col">1-(α/2)</th>
-                  <th scope="col">X^2(α/2)</th>
-                  <th scope="col">X^2 1-(α/2)</th>
-                  <th scope="col">LI</th>
-                  <th scope="col">LS</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <div class="card-footer text-muted text-center">
-            RESULTADO:
-            <strong>
-              <h1 id="result_varianza"></h1>
-            </strong>
-          </div>
-        </div>
-        <!-- Prueba de uniformidad (chi^2) -->
-        <div class="card mb-3">
-          <div class="card-header text-center text-light bg-secondary">
-            <h2 class="card-title">Prueba de uniformidad (chi^2)</h2>
-          </div>
-          <div class="card-body">
-            <div class="row">
-            </div>
-            <div class="row">
-              <table class="table table-striped table-dark" id="table-chi_1">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Ri</th>
-                    <th scope="col">Xi</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-            <div class="row">
-              <table class="table table-striped table-dark" id="table-chi_2">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Inicial</th>
-                    <th scope="col">Final</th>
-                    <th scope="col">Frec. Obtenida</th>
-                    <th scope="col">Frec. Esperada</th>
-                    <th scope="col">Chi^2</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card-footer text-muted text-center">
-            RESULTADO:
-            <strong>
-              <h1 id="result_chi"></h1>
+              <h1 id="result_corridas"></h1>
             </strong>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Scripts -->
+    <!-- Scripts -->
   <script type="text/javascript" src="scripts/MiddleSquares.js"></script>
   <script type="text/javascript" src="scripts/congruencial_lineal.js"></script>
   <script type="text/javascript" src="scripts/congruencial_multiplicativo.js"></script>
